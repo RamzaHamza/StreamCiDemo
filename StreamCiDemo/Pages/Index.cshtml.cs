@@ -7,11 +7,19 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace StreamCiDemo.Pages
 {
-    public class IndexModel : PageModel
-    {
-        public void OnGet()
-        {
+	public class IndexModel : PageModel
+	{
 
-        }
-    }
+		public IndexModel(IRepository repository)
+		{
+			this.Repository = repository;
+		}
+
+		public IRepository Repository { get; }
+
+		public void OnGet()
+		{
+
+		}
+	}
 }

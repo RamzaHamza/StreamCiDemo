@@ -10,6 +10,8 @@ namespace StreamCiDemo.Pages
     {
         public string Message { get; set; }
 
+		public DateTime dateTime { get; set; } = DateTime.Today;
+
         public void OnGet()
         {
             Message = "Your application description page.";
